@@ -19,9 +19,9 @@
             :key="field.key"
             type="text"
             :id="field.id"
-            class="w-full sm:w-1/2 bg-white/0 border-2 border-green-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
             :placeholder="field.placeholder"
-            required
+            class="w-full sm:w-1/2 bg-white/0 border-2 border-green-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
+            v-model="formData[field.key]"
           />
         </div>
 
@@ -30,32 +30,29 @@
           :key="field.key"
           type="text"
           :id="field.id"
-          class="w-full bg-white/0 border-2 border-green-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
           :placeholder="field.placeholder"
-          required
+          class="w-full bg-white/0 border-2 border-green-400 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 p-2.5"
+          v-model="formData[field.key]"
         />
-        <div
-          class="flex flex-col sm:flex-row justify-between items-center mt-2 p-4"
-        >
-          <NuxtLink
-            to="/login"
-            class="text-white text-center sm:text-left mb-2 sm:mb-0"
-          >
-            <h1>Already have an account?</h1>
-          </NuxtLink>
-          <button class="h-12 w-full sm:w-32 bg-green-500 rounded-xl">
-            Register
-          </button>
-        </div>
+
+        <button class="h-12 w-32 bg-green-500 rounded-xl self-end mt-6">
+          Register
+        </button>
       </form>
     </div>
   </div>
 </template>
-
 <script>
 export default {
   data() {
     return {
+      formData: {
+        firstName: "",
+        lastName: "",
+        studentId: "",
+        password: "",
+        confirmPassword: "",
+      },
       nameFields: [
         { id: "first_name", placeholder: "First Name", key: "firstName" },
         { id: "last_name", placeholder: "Last Name", key: "lastName" },
