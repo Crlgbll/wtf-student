@@ -3,6 +3,7 @@ export default {
   content: [],
   theme: {
     screens: {
+      xxxxs: "280px",
       xxxs: "320px",
       xxs: "375px",
       xs: "480px",

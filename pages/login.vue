@@ -9,7 +9,7 @@
     />
 
     <div
-      class="xxxxs:w-full xxxs:w-full xxs:w-full xs:w-4/5 md:w-4/6 lg:w-2/5 xl:w-2/4 mt-6 p-10 bg-black rounded-xl"
+      class="w-full sm:w-4/5 md:w-3/5 lg:w-2/5 xl:w-1/3 mt-6 p-10 bg-black rounded-xl"
     >
       <h1 class="text-4xl font-bold mb-10 text-center">Register</h1>
       <form class="flex flex-col gap-4">
@@ -34,19 +34,10 @@
           :placeholder="field.placeholder"
           required
         />
-        <div
-          class="flex flex-col sm:flex-row justify-between items-center mt-2 p-4"
-        >
-          <NuxtLink
-            to="/login"
-            class="text-white text-center sm:text-left mb-2 sm:mb-0"
-          >
-            <h1>Already have an account?</h1>
-          </NuxtLink>
-          <button class="h-12 w-full sm:w-32 bg-green-500 rounded-xl">
-            Register
-          </button>
-        </div>
+
+        <button class="h-12 w-32 bg-green-500 rounded-xl self-end mt-6">
+          Register
+        </button>
       </form>
     </div>
   </div>
