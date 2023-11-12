@@ -1,9 +1,14 @@
 <template>
   <div
-    class="h-screen w-full bg-gradient-to-br from-orange-700 to-blue-500 font-Poppins text-white flex flex-col items-center justify-center relative"
+    class="h-screen w-full bg-black font-Poppins text-white flex flex-col items-center justify-center relative"
   >
+    <img
+      class="h-screen w-full bg-fixed absolute"
+      src="~/assets/images/login-bg.png"
+      alt=""
+    />
     <div
-      class="xxxxs:w-full xxxs:w-full xxs:w-full xs:w-4/5 md:w-4/6 lg:w-2/5 xl:w-2/4 mt-6 p-10 bg-black rounded-xl relative"
+      class="xxxxs:w-full xxxs:w-full xxs:w-full xs:w-4/5 md:w-4/6 lg:w-2/5 xl:w-2/4 mt-6 p-10 bg-black/70 rounded-xl relative border-2 border-gray-700"
     >
       <div class="flex justify-around items-center h-24 w-full">
         <img
@@ -18,7 +23,7 @@
       <form class="flex flex-col gap-4">
         <div class="flex flex-col sm:flex-row gap-5">
           <input
-            v-for="field in nameFields"
+            v-for="field in credentialFields"
             :key="field.key"
             type="text"
             :id="field.id"
@@ -29,7 +34,7 @@
         </div>
 
         <input
-          v-for="field in inputFields"
+          v-for="field in authCredentialFields"
           :key="field.key"
           type="text"
           :id="field.id"
@@ -60,13 +65,11 @@ export default {
         password: "",
         confirmPassword: "",
       },
-      nameFields: [
-        { id: "first_name", placeholder: "First Name", key: "firstName" },
-        { id: "last_name", placeholder: "Last Name", key: "lastName" },
-      ],
-      inputFields: [
-        { id: "email", placeholder: "Email", key: "email" },
+      credentialFields: [
         { id: "student_id", placeholder: "Student ID", key: "studentId" },
+        { id: "email", placeholder: "Email", key: "email" },
+      ],
+      authCredentialFields: [
         { id: "password", placeholder: "Password", key: "password" },
         {
           id: "confirm_password",

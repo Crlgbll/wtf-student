@@ -1,41 +1,43 @@
 <template>
   <div
-    class="h-screen w-full bg-black font-Poppins text-white flex flex-col justify-center items-center"
+    class="h-screen w-full bg-black font-Poppins text-white flex flex-col justify-end"
   >
     <img
       class="h-screen w-full bg-fixed absolute"
-      src="~/assets/images/login-bg.png"
+      src="~/assets/images/landing-bg.png"
       alt=""
     />
-    <div class="py-10 flex flex-col items-center z-50">
-      <img class="h-20 w-20 mb-4" src="~/assets/images/ccis-logo.png" alt="" />
+    <div class="h-96 w-96 flex-col items-center z-50">
+      <div class="flex h-20 w-full pl-9 pt-3">
+        <div
+          class="h-14 w-14 rounded-full bg-black relative flex items-center justify-center"
+        >
+          <img class="h-6 w-6" src="~/assets/images/wtf-logo.png" alt="" />
+        </div>
 
-      <div class="mb-4 flex w-full justify-between items-center">
         <img
-          class="h-6 w-36 mr-2"
-          src="~/assets/images/wtf-logo-gray.png"
+          class="h-14 w-14 rounded-full"
+          src="~/assets/images/ccis-logo.png"
           alt=""
         />
-        <h1 class="font-bold text-xl mt-2">Select</h1>
       </div>
-
-      <div class="flex gap-3">
+      <div class="px-9 gap-5 flex flex-col">
+        <h1 class="font-bold text-black text-4xl">
+          Start monitoring your balance!
+        </h1>
+        <p class="text-[13px] text-black">
+          You can also check the total amount collected in your college for
+          transparency, including <br />
+          the fees you paid
+        </p>
+      </div>
+      <div class="h-28 w-full flex items-end pl-9">
         <button
-          class="h-9 w-32 p-1 text-lg rounded-lg font-black bg-gradient-to-l from-green-800 to-green-400 hover:scale-105 justify-around flex flex-row"
+          class="h-10 w-28 bg-black font-bold rounded-lg hover:bg-white hover:text-black ease-in-out hover:scale-105"
         >
-          <NuxtLink to="/login">Login</NuxtLink>
-          <Icon class="h-7 w-7" name="ph:arrow-up-right-bold" />
-        </button>
-        <button
-          class="h-9 w-32 p-1 text-lg rounded-lg font-black border-2 border-yellow-500 hover:scale-105 justify-around flex flex-row"
-        >
-          <NuxtLink
-            to="/register"
-            class="bg-gradient-to-r from-green-600 to-green-300 text-transparent bg-clip-text"
-          >
-            Register
-          </NuxtLink>
-          <Icon class="h-7 w-7" name="ph:arrow-up-right-bold" />
+          <NuxtLink to="/register">
+            Start <icon name="ic:round-arrow-forward"></icon
+          ></NuxtLink>
         </button>
       </div>
     </div>

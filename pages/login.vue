@@ -1,9 +1,14 @@
 <template>
   <div
-    class="h-screen w-full bg-gradient-to-br from-orange-700 to-blue-500 font-Poppins text-white flex flex-col items-center justify-center relative"
+    class="h-screen w-full bg-black font-Poppins text-white flex flex-col items-center justify-center relative"
   >
+    <img
+      class="h-screen w-full bg-fixed absolute"
+      src="~/assets/images/login-bg.png"
+      alt=""
+    />
     <div
-      class="xxxxs:w-full xxxs:w-full xxs:w-full xs:w-4/5 md:w-4/6 lg:w-2/5 xl:w-2/4 mt-6 p-10 bg-black rounded-xl relative"
+      class="xxxxs:w-full xxxs:w-full xxs:w-full xs:w-4/5 md:w-4/6 lg:w-2/5 xl:w-2/4 mt-6 p-10 bg-black/70 rounded-xl relative border-2 border-gray-700"
     >
       <div class="flex justify-around items-center h-24 w-full">
         <img
@@ -39,7 +44,7 @@
         />
 
         <div class="flex flex-row my-4 h-8 w-full justify-around items-center">
-          <NuxtLink to="/register "> Don't have an account? </NuxtLink>
+          <NuxtLink to="/register"> Don't have an account? </NuxtLink>
           <button class="h-8 w-32 bg-green-500 rounded-xl self-end mt-6">
             Login
           </button>
