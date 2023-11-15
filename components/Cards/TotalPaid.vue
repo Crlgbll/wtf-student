@@ -1,16 +1,15 @@
 <template>
   <div
-    class="h-28 w-48 lg:h-48 lg:w-96 relative bg-[#1F1F1F] rounded-2xl border-gray-700 border-2 mt-10 mr-5"
+    class="h-24 w-[165px] lg:h-48 lg:w-96 relative bg-[#1F1F1F] rounded-2xl border-gray-700 border-2"
   >
-    <div class="flex h-1/2 w-full">
-      <img
-        class="h-6 w-6 absolute right-3 top-3"
-        src="~/assets/images/wtf-logo-lightgreen.png"
-        alt=""
-      />
-    </div>
-    <div class="flex flex-col items-end h-1/2 w-44 pr-3">
-      <p class="text-2xl lg:text-6xl text-center text-[#A4A4A4] font-bold">
+    <img
+      class="h-4 w-4 absolute right-3 top-2"
+      src="~/assets/images/wtf-logo-lightgreen.png"
+      alt=""
+    />
+
+    <div class="flex flex-col justify-end items-end h-[85px] w-full px-2 pb-4">
+      <p class="text-xl lg:text-6xl text-center text-[#A4A4A4] font-bold">
         ₱{{ totalPaid }}
       </p>
       <p class="text-[5px] text-[#A9A8A8]">

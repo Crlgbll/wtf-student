@@ -1,9 +1,9 @@
 <template>
   <div
-    class="h-28 w-48 lg:h-48 lg:w-96 relative bg-[#1F1F1F] to-black rounded-2xl border-gray-700 border-2 flex ml-5 mt-10"
+    class="h-24 w-[165px] lg:h-48 lg:w-96 relative bg-[#1F1F1F] to-black rounded-2xl border-gray-700 border-2 flex"
   >
     <img
-      class="h-11 w-11 rounded-full absolute top-9"
+      class="h-8 w-8 rounded-full absolute top-7"
       src="~/assets/images/ccis-logo.png"
       alt=""
     />
@@ -12,11 +12,11 @@
       class="flex flex-col items-end h-full w-44 relative justify-end pr-3 pb-4"
     >
       <img
-        class="h-6 w-6 absolute top-2 right-3"
+        class="h-4 w-4 absolute top-2 right-3"
         src="~/assets/images/wtf-logo-lightgreen.png"
         alt=""
       />
-      <p class="text-2xl lg:text-6xl font-bold text-[#A4A4A4]">
+      <p class="text-xl lg:text-6xl font-bold text-[#A4A4A4]">
         ₱{{ totalPayment }}
       </p>
       <p class="text-[5px] text-end text-[#A9A8A8]">

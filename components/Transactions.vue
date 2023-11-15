@@ -1,12 +1,14 @@
 <template>
-  <div class="h-96 w-full overflow-y-auto my-5">
-    <div class="h-10 w-full flex justify-between my-2 px-4">
-      <h1 class="text-center font-bold text-3xl lg:text-4xl">Logs</h1>
+  <div class="h-96 w-full overflow-y-auto">
+    <div class="h-10 w-full flex justify-between my-2 px-6">
+      <h1 class="text-center font-bold text-2xl lg:text-4xl text-[#3ED598]">
+        Logs
+      </h1>
       <DropdownFilter />
     </div>
 
     <div
-      class="max-h-[500px] h-24 lg:h-28 w-full flex justify-center border-t-[1px] pt-3 border-[#5E5D5D]"
+      class="max-h-[500px] h-24 w-[350px] flex justify-center border-t-[1px] pt-3 border-[#5E5D5D] mx-auto"
       v-for="payment in paymentData"
       :key="payment.ar_no"
     >
@@ -54,7 +56,10 @@
           A.Y. {{ payment.acad_year }}
         </p>
         <div
-          class="h-5 w-12 lg:h-19 lg:w-14 bg-[#2F2F2F] text-[#FFFB93] rounded-sm text-xs flex items-center justify-center"
+          :class="[
+            'h-5 w-12 lg:h-19 lg:w-14 bg-[#2F2F2F] rounded-sm text-xs flex items-center justify-center',
+            payment.desc === 'full' ? 'text-green-400' : 'text-yellow-400',
+          ]"
         >
           <p class="text-[10px] text-center mt-0.5">{{ payment.desc }}</p>
         </div>

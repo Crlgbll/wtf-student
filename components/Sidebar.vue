@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full w-52 bg-[#1A1919] absolute top-0 left-0 z-50">
+  <div class="h-full w-52 bg-[#1A1919] absolute top-0 left-0 z-10">
     <div class="flex h-1/3 w-full pl-5 pt-6 items-start gap-2">
       <button
         class="h-12 w-12 rounded-full bg-[#3ED598] hover:scale-105 ease-in-out"
@@ -46,7 +46,6 @@ export default {
         const data = await response.json();
         if (response.status === 200 && data.message === "Student found") {
           this.studentData = data.student;
-          console.log(data.student.program.program_name);
         } else {
         }
       } catch (error) {
